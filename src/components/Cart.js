@@ -3,7 +3,7 @@ import { useSelector,useDispatch} from "react-redux";
 const Cart=()=>{
 
 const items=useSelector((state)=>state.array);
-console.log(items)
+
 
   // EMPTY CART
   if (items.length === 0) {
