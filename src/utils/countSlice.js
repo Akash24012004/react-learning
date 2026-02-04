@@ -1,16 +1,17 @@
-import {createSlice} from "@reduxjs/toolkit";
-const CounterSlice=createSlice({
-    name:"counter",
-    initialState:{value:0},
-    reducers:{
-        increment:(state)=>{
-            state.value+=1
-        },
-        decrement:(state)=>{
-            state.value-=1
-        }
+import { createSlice } from "@reduxjs/toolkit";
+
+const countSlice = createSlice({
+  name: "counter",
+  initialState: {value:0},
+  reducers: {
+    increment:(state)=>{
+      console.log(state)
+      state.value+=1;
+      // ya RTK + Immer ki wajah se:
+      // state += 1;  ❌ (primitive me mutation allowed nahi)
     }
-})
-console.log(CounterSlice.reducer)
-export const {increment,decrement}=CounterSlice.actions;
-export default CounterSlice.reducer
+  }
+});
+
+export const { increment } = countSlice.actions;
+export default countSlice.reducer;

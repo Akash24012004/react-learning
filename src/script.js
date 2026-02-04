@@ -1,6 +1,6 @@
 import "./style.css";
 
-import { lazy } from "react";
+import Cart from "./components/Cart";
 import Header from "./components/Header";
 import CardContainer from "./components/Body";
 import RouterLearning from "./components/routerLearning";
@@ -13,7 +13,7 @@ import Contect from "./components/Contact";
  import React from "react";
 import ReactDOM from "react-dom/client"; 
 import Restorents from "./components/Restrorent";        
- const Cart=lazy(()=>import("./components/Cart"))
+ 
  const router=createBrowserRouter([ 
   {
   path:"/",

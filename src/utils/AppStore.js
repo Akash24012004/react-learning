@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import countReducer from "./countSlice";
-console.log(countReducer)
+import countSlice from "./countSlice.js"
+import ItemCounterSlice from "./ItemCounterSlice"
+import arraySlice from "./ArraySlices"
+
 export const store =configureStore({
    reducer:{
-      counter:countReducer
+      counter:countSlice,
+      CartItem:ItemCounterSlice,
+      array:arraySlice
    } 
 });

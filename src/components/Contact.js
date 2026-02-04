@@ -2,7 +2,7 @@ import React from "react";
 import { useState,useEffect} from "react";
 import ButtonIncrease from "../utils/ButtonIncrease";
 import { useSelector,useDispatch} from "react-redux";
-import  { increment,decrement } from "../utils/countSlice";
+import  { increment } from "../utils/countSlice.js";
 const Contect=()=>{
     const {count,Increment}=ButtonIncrease()
      const data=useSelector((state)=>{return state.counter.value})
